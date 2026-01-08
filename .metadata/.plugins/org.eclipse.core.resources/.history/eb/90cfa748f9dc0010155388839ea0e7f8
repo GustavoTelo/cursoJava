@@ -1,0 +1,45 @@
+package application;
+
+import java.util.Scanner;
+
+import entities.Quarto;
+
+public class program2 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		Quarto[] rent = new Quarto[10];
+		
+		System.out.print("how many will bee rented: ");
+		int n = sc.nextInt();
+		
+		
+		
+		for (int i=1; i<n; i++) {
+			System.out.println("Rent #" + (i + ":");
+			System.out.print("name: ");
+			sc.nextLine();
+			String nome = sc.nextLine();
+			System.out.print("email: ");
+			String email = sc.nextLine();
+			System.out.print("room: ");
+			int room = sc.nextInt();
+			rent[i] = new Quarto(nome, email, room);	
+		}
+		
+		System.out.println("Busy rooms:" );
+		for (int i=0; i<rent.length; i++) {
+			System.out.println(rent[i]);
+		}
+		
+		
+		
+		sc.close();
+			
+		
+		
+	
+	}
+}

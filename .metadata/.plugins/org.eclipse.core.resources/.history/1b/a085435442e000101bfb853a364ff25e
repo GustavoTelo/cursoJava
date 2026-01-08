@@ -1,0 +1,49 @@
+package entities;
+
+import java.util.Date;
+
+import entities.enums.OrderStatus;
+
+public class Order2 {
+
+	private int id;
+	private Date moment;
+	private OrderStatus stts;
+
+	public Order2() {
+	}
+
+	public Order2(int id, Date moment, OrderStatus stts) {
+		this.id = id;
+		this.moment = moment;
+		this.stts = stts;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public Date getMoment() {
+		return moment;
+	}
+
+	public void setMoment(Date moment) {
+		this.moment = moment;
+	}
+
+	public OrderStatus getStts() {
+		return stts;
+	}
+
+	public void setStts(OrderStatus stts) {
+		this.stts = stts;
+	}
+	
+	
+	
+	
+}

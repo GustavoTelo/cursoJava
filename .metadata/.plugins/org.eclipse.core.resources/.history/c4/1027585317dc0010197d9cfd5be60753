@@ -1,0 +1,45 @@
+package entities;
+
+public class Conta {
+	int number;
+	private String holder;
+	private double balance;
+	
+	public Conta() {
+	
+	}
+	
+	public Conta(int number, String holder, double balance) {
+		this.number = number;
+		this.holder = holder;
+		this.balance = balance;
+	}
+	public Conta(int number, String holder) {
+		this.number = number;
+		this.holder = holder;
+	}
+	
+	public String changeName(String holder) {
+		this.holder = holder;
+	}
+	
+	public double Deposito(double balance) {
+		return balance += balance;
+	}
+	public double WithDraw(double balance) {
+		return balance -= balance - 5;
+		
+		
+	public String toString() {
+		return "Accont "
+		+ number
+		+ ", Holder: "
+		+ holder
+		+ ", Balance: $ "
+		+ balance;
+		
+	}
+	}
+	
+}
+

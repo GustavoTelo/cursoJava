@@ -1,0 +1,33 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Conta;
+
+public class banco {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		
+		System.out.printf("Enter account number: ");
+		double number = sc.nextDouble();
+		System.out.printf("Enter account holder: ");
+		String holder = sc.nextLine();
+		System.out.print("is there na initial deposit (s/n?" );
+		String decition = sc.nextLine();
+		
+		if (decition == "s") {
+			System.out.print("enter initial deposit value: ");
+		}
+		double balance = sc.nextDouble();
+		Conta conta = new Conta(number, holder, balance); 		
+		
+		
+		sc.close();
+	}
+
+}
+	
