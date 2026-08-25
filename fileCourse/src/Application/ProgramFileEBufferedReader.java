@@ -10,15 +10,10 @@ public class ProgramFileEBufferedReader {
 		// TODO Auto-generated method stup
 	
 		String path = "C:\\Users\\Gustavo\\OneDrive\\Área de Trabalho\\planilhas\\GABARITO ORCAMENTOS.txt";
-		FileReader fr = null;
-		BufferedReader br = null;
+
 		
 		
-		try {
-			fr = new FileReader(path);
-			br = new BufferedReader(fr);
-			// jeito mais simples:  br = new BufferedReader(new FileReader(path)); mas com isso faz ficar mais dificil de fechar manualmente
-			
+		try (BufferedReader br = new BufferedReader(new FileReader(path))){
 			String line = br.readLine();
 			
 			while (line != null) {
@@ -32,20 +27,7 @@ public class ProgramFileEBufferedReader {
 		catch (IOException e ) {
 			System.out.println("Error: " + e.getMessage());
 		}
-		finally {
-			try {
-				if (fr != null) {
-					fr.close();
-				}
-				if (br != null) {
-					br.close();
-				}
-			}
-			catch (IOException e ) {
-				e.printStackTrace();
-			}
-			
-		}
+		
 		
 
 	}
